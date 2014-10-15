@@ -572,7 +572,7 @@ public enum Material {
      * @return True is material is a projectile
      */
      public boolean isProjectile() {
-        if (this.projectile) {
+        if (this.isBlock()) {
             return false;
         }
         
