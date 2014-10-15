@@ -565,6 +565,29 @@ public enum Material {
                 return true;
         }
     }
+    
+    /**
+     * Check if a block is a projectile or not.
+     * 
+     * @return True is material is a projectile
+     */
+     public boolean isProjectile() {
+        if (this.projectile) {
+            return false;
+        }
+        
+        switch (this) {
+            case ARROW:
+            case EGG:
+            case ENDER_PEARL:
+            case FIREBALL:
+            case SNOWBALL:
+            case EXP_BOTTLE
+                return true;
+            default:
+                return false;
+        }  
+     }
 
     /**
      * Check if a block is flammable or not
